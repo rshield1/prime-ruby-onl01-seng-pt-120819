@@ -19,4 +19,3 @@ primes = (0..max).to_a
   # Finally, return the compacted array.	
   puts "Solved for #{max} in #{counter} steps."	
   primes.compact	
-end
