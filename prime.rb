@@ -1,21 +1,24 @@
 # Add  code here!
 
-
-primes = (0..max).to_a	
-
-  primes[0] = primes[1] = nil	
-
-	
-  counter = 0	
-  primes.each do |p|	
- 	
-    next unless p	
-  	
-    break if p*p > max	
-    counter += 1	
-        (p*p).step(max,p) { |m| primes[m] = nil }	
-  end	
-
-  # Finally, return the compacted array.	
-  puts "Solved for #{max} in #{counter} steps."	
-  primes.compact	
+def prime?(integer)
+  
+  my_range = (2..integer - 1).to_a 
+  
+  if integer == 2 || integer == 3
+    
+    return true
+    
+  elsif integer <= 1 
+  
+    return false
+    
+  end
+  my_range.any? { |divider|
+  
+  if integer % divider == 0 
+      
+      return false
+    end
+  }
+  true 
+end 
