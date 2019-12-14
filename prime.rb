@@ -14,14 +14,10 @@ def prime?(int)
     
   end
   
-  range.any? { |divider|
-  
-  if int % divider == 0 
-      
+  range.any? do |divider| if int % divider == 0 
       return false
-      
+      end
     end
-  }
   
   true 
 end 
