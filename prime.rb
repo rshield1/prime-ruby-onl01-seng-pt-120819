@@ -8,7 +8,7 @@ def prime?(int)
     
     return true
     
-  elsif integer <= 1 
+  elsif int <= 1 
   
     return false
     
