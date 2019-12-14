@@ -2,7 +2,7 @@
 
 def prime?(int)
   
-  my_range = (2..int - 1).to_a 
+  range = (2..int - 1).to_a 
   
   if int == 2 || int == 3
     
@@ -14,7 +14,7 @@ def prime?(int)
     
   end
   
-  my_range.any? { |divider|
+  range.any? { |divider|
   
   if int % divider == 0 
       
