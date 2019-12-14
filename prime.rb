@@ -1,11 +1,22 @@
 # Add  code here!
 
 
-def prime?(int)
-  #how to determine if a number is a prime 
-#create a range of numbers then turn into array  
-  #so we can iterate over it
+primes = (0..max).to_a	
 
+  primes[0] = primes[1] = nil	
 
-#return bool  
+	
+  counter = 0	
+  primes.each do |p|	
+ 	
+    next unless p	
+  	
+    break if p*p > max	
+    counter += 1	
+        (p*p).step(max,p) { |m| primes[m] = nil }	
+  end	
+
+  # Finally, return the compacted array.	
+  puts "Solved for #{max} in #{counter} steps."	
+  primes.compact	
 end
